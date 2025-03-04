@@ -188,7 +188,7 @@ img {
   gap: 0.5rem;
 }
 
-/* media query for 768px  */
+/** Media Query */
 
 @media (width<=768px) {
   h1 {
@@ -240,7 +240,7 @@ img {
   }
 }
 
-/* media query for 500px  */
+/** Media Query */
 
 @media (width<=500px) {
   h1 {

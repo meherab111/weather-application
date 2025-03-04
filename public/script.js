@@ -26,7 +26,7 @@ let weatherPressure = document.querySelector(".weather_pressure");
 
 let city = "dhaka";
 
-// search city
+// Search City
 
 inputFieldForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -38,7 +38,7 @@ inputFieldForm.addEventListener("submit", (e) => {
   inputField.value = "";
 });
 
-// fetch Functionality
+// Fetch Functionality
 
 const fetchApiDataFunc = async () => {
   const fetchedApi = `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=e687b23172c6437d96093a197c9e283e`;
@@ -49,7 +49,7 @@ const fetchApiDataFunc = async () => {
 
     const { main, name, sys, weather, wind, dt } = fetchedData;
 
-    // using Intl api to display Country Full Name
+    // Using Intl Api To Display Country Full Name
 
     const regionNamesInEnglish = new Intl.DisplayNames([sys.country], {
       type: "region",
@@ -58,7 +58,7 @@ const fetchApiDataFunc = async () => {
       sys.country
     )}`;
 
-    // using Intl api to display Date and Time
+    // Using Intl Api To Display Date And Time
 
     let dateTime = new Date(dt * 1000);
     const dateTimeObj = {
@@ -72,7 +72,7 @@ const fetchApiDataFunc = async () => {
     const dateInFullFormat = new Intl.DateTimeFormat("en-US", dateTimeObj);
     weatherDate.textContent = dateInFullFormat.format(dateTime);
 
-    // displaying all the info
+    // Displaying All The Info
 
     weatherIcon.innerHTML = `<img src="http://openweathermap.org/img/wn/${weather[0].icon}@2x.png" /> <p class="W_stat">${weather[0].main}</p>`;
 
@@ -95,5 +95,7 @@ const fetchApiDataFunc = async () => {
     alert("Sorry ! Couldn't find that City !");
   }
 };
+
+// Load Functionality
 
 loadBody.addEventListener("load", fetchApiDataFunc());
