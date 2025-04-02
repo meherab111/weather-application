@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main_div">
+      <div class="search_div">
+        <form class="input_field_form">
+          <i class="fas fa-search"></i>
+          <input
+            type="text"
+            class="input_field"
+            placeholder="Enter city name"
+          />
+        </form>
+      </div>
+
+      <div class="weather_body_div">
+        <h1 class="weather_address"></h1>
+        <p class="weather_date"></p>
+        <div class="weather_icon_div">
+          <!-- Dynamic Insertion -->
+        </div>
+        <p class="weather_temp"></p>
+        <div class="weather_minmax_div">
+          <p class="weather_min"></p>
+          <p class="weather_max"></p>
+        </div>
+      </div>
+
+      <div class="weather_extra_info_div">
+        <div class="info_cards1_div">
+          <div class="card1_div">
+            <i class="fas fa-thermometer-half"></i>
+            <div class="feels_like_div">
+              <p>Feels Like</p>
+              <p class="weather_feels_like"></p>
+            </div>
+          </div>
+          <div class="card2_div">
+            <i class="fas fa-tint"></i>
+            <div class="humidity_div">
+              <p>Humidity</p>
+              <p class="weather_humidity"></p>
+            </div>
+          </div>
+        </div>
+        <div class="info_cards2_div">
+          <div class="card3_div">
+            <i class="fas fa-wind"></i>
+            <div class="wind_div">
+              <p>Wind Speed</p>
+              <p class="weather_wind"></p>
+            </div>
+          </div>
+          <div class="card4_div">
+            <i class="fas fa-tachometer-alt"></i>
+            <div class="pressure_div">
+              <p>Pressure</p>
+              <p class="weather_pressure"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
